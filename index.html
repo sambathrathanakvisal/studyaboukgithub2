@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ចុចទៅ មានកាដូឱ្យ😝❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#292012, #050505 75%);
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.scene {
+  text-align: center;
+  perspective: 900px;
+}
+
+h2 {
+  color: #ffd76a;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px gold;
+}
+
+.gift {
+  width: 170px;
+  height: 145px;
+  position: relative;
+  margin: 90px auto 35px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 25px #ffbd36);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 12px #d99a20); }
+  to { filter: drop-shadow(0 0 35px gold); }
+}
+
+.box {
+  position: absolute;
+  width: 170px;
+  height: 115px;
+  bottom: 0;
+  background: linear-gradient(90deg,#171717,#34302b,#111);
+  border: 2px solid #b88928;
+  border-radius: 8px;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  left: 65px;
+  width: 35px;
+  height: 100%;
+  background: linear-gradient(90deg,#b77b14,#ffe58b,#d89a24);
+}
+
+.lid {
+  position: absolute;
+  z-index: 5;
+  width: 186px;
+  height: 35px;
+  left: -8px;
+  top: -8px;
+  border: 2px solid #d5a333;
+  border-radius: 7px;
+  background: linear-gradient(#39332a,#171717);
+  transition: 1s;
+  transform-origin: left bottom;
+}
+
+.lid::before {
+  content: "";
+  position: absolute;
+  left: 74px;
+  width: 35px;
+  height: 100%;
+  background: linear-gradient(90deg,#c58b25,#fff0a5,#d79b26);
+}
+
+.ribbon {
+  position: absolute;
+  z-index: 7;
+  top: -52px;
+  left: 47px;
+  width: 75px;
+  height: 50px;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  border: 10px solid #ffd35c;
+  border-radius: 50%;
+  box-shadow: 0 0 12px gold;
+}
+
+.ribbon::after {
+  left: 28px;
+  transform: scaleX(-1);
+}
+
+.knot {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: #ffd45a;
+  left: 26px;
+  top: 15px;
+  z-index: 8;
+  transform: rotate(45deg);
+}
+
+.letter {
+  position: absolute;
+  z-index: 3;
+  width: 125px;
+  height: 100px;
+  background: #fff4d4;
+  border: 2px solid #d7a94a;
+  border-radius: 7px;
+  left: 22px;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a56b12;
+  font-size: 26px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(0) scale(.5);
+  transition: 1.3s ease;
+  box-shadow: 0 0 25px gold;
+}
+
+.open .lid {
+  transform: translate(-15px,-65px) rotate(-30deg);
+}
+
+.open .letter {
+  opacity: 1;
+  transform: translateY(-190px) scale(1.15);
+  z-index: 10;
+}
+
+.open .gift {
+  animation: none;
+}
+
+button {
+  padding: 13px 30px;
+  border: 1px solid #ffe18a;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#ffe18a,#b77a16);
+  color: #211505;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px #dba42d;
+}
+
+.caption {
+  color: #ffe3a0;
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scene" id="scene">
+
+  <h2>✨ បើកទៅ មានកាដូឱ្យ😘😜😝 ✨</h2>
+
+  <div class="gift" id="gift">
+
+    <div class="letter"> គេមកវិញនៅ❤️</div>
+
+    <div class="lid"></div>
+
+    <div class="ribbon">
+      <div class="knot"></div>
+    </div>
+
+    <div class="box"></div>
+
+  </div>
+
+  <button id="openBtn" onclick="openGift()">
+    🎁 OPEN GIFT
+  </button>
+
+  <p class="caption">
+    ការដូនេះសម្រាប់អ្នកលេង Streak ជាមួយខ្ញុំ ❤️
+  </p>
+
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("scene").classList.add("open");
+
+  document.getElementById("openBtn").innerText =
+    "💌 អរគុណសម្រាប់ការបើកកាដូ";
+
+  document.getElementById("openBtn").disabled = true;
+}
+</script>
+
+</body>
+</html>
